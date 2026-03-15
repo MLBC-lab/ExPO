@@ -174,6 +174,11 @@ class ExperimentConfig:
         )
 
     @classmethod
+    def from_json(cls, path: str | Path) -> "ExperimentConfig":
+        """Load configuration from JSON file."""
+        return cls.load(path)
+
+    @classmethod
     def load(cls, path: str | Path) -> "ExperimentConfig":
         path = Path(path)
         if path.suffix.lower() in {".yml", ".yaml"}:

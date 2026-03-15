@@ -60,6 +60,10 @@ class CMapL1000Dataset(Dataset):
         return sample
 
 
+# Alias for backward compatibility and API consistency
+ExPODataset = CMapL1000Dataset
+
+
 @dataclass
 class InMemoryDatasetCache:
     """Simple in-memory cache for datasets.

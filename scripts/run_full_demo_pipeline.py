@@ -39,8 +39,8 @@ def write_demo_config(config_path: Path, data_dir: Path, run_name: str = "demo_r
         "chem": {
             "train_randomized_smiles": False,
             "randomized_smiles_prob": 0.0,
-            "encoder_model_name": "chemberta-small",
-            "freeze_encoder": True,
+            "pretrained_model_name": "seyonec/ChemBERTa-zinc-base-v1",
+            "freeze_lower_layers": 6,
         },
         "training": {
             "learning_rate": 1e-3,
